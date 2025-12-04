@@ -17,6 +17,7 @@ export default function NaturalComponents() {
         </div>
         <div className="space-y-6">
           <h3 className="text-3xl font-bold text-gray-900">100% Natural Components</h3>
+           <p className="text-gray-900 text-xl font-semibold">Nature-Powered Wellness You Can Trust</p>
           <p className="text-gray-600 text-xl leading-relaxed">
             We harness the goodness of nature to create supplements enriched with premium, research-backed superfood
             extracts. Each formula is carefully crafted to promote overall vitality and deliver proven health benefits.
