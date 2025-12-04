@@ -1,9 +1,9 @@
 export default function Hero() {
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-zinc-100">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
-          <h1 className="text-5xl font-bold text-gray-900 leading-tight">
+          <h1 className="text-6xl font-bold text-gray-900 leading-tight">
             Health Desk Clinic: All Natural Supplements
           </h1>
           <p className="text-gray-600 text-lg leading-relaxed">
@@ -16,7 +16,13 @@ export default function Hero() {
           </button>
         </div>
         <div className="flex items-center justify-center">
-          <img src="/images/image.png" alt="Healthcare professional" className="w-full h-auto rounded-lg" />
+       <img
+  src="/header.png"
+  alt="Healthcare professional"
+  className="w-max h-126 object-contain rounded-lg"
+/>
+
+
         </div>
       </div>
     </section>

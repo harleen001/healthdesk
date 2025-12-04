@@ -3,42 +3,58 @@ export default function NutritionSolutions() {
     {
       title: "Weight Loss",
       description:
-        "Science-backed weight loss products that help boost metabolism and support your journey to a healthier you",
-      icon: "⚖️",
+        "Shop trusted weight loss products that help boost metabolism and support your journey to a healthier you",
+      logo: "/weightloss.png",
     },
     {
       title: "Nerve Pain",
-      description: "Our nerve pain product line formulated to soothe discomfort and support healthy nerve function",
-      icon: "🧠",
+      description:
+        "Find relief with nerve pain products formulated to soothe discomfort and support healthy nerve function",
+      logo: "/nervepain.png",
     },
     {
       title: "Skin Care",
-      description: "Natural skin care products that nourish, protect, and enhance your natural glow",
-      icon: "✨",
+      description:
+        "Explore premium skincare products that nourish, protect, and enhance your natural glow",
+      logo: "/skincare.png",
     },
     {
       title: "Men's Health",
-      description: "Designed to boost energy, strength, and overall well-being for men's vitality",
-      icon: "💪",
+      description:
+        "Discover men’s health products designed to boost energy, strength, and overall well-being.",
+      logo: "/menshealth.png",
     },
     {
       title: "Women's Health",
-      description: "Support hormonal balance and overall wellness for women's complete vitality",
-      icon: "👩",
+      description:
+        "Explore women’s health products that support hormonal balance, vitality, and overall wellness",
+      logo: "/womenshealth.png",
     },
   ]
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h2 className="text-4xl font-bold text-gray-900 mb-12">Nutrition Solutions for Your Complete Well-Being</h2>
+    <section className="max-w-7xl mx-auto px-4 sm:px-4 lg:px-6 py-14">
+      <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
+        Nutrition Solutions for Your Complete Well-Being
+      </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
         {solutions.map((solution, idx) => (
-          <div key={idx} className="bg-blue-50 rounded-lg p-6 text-center space-y-4">
-            <div className="text-4xl">{solution.icon}</div>
-            <h3 className="font-bold text-gray-900 text-lg">{solution.title}</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">{solution.description}</p>
-            <button className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-full transition-colors">
+          <div
+            key={idx}
+            className="bg-blue-50 rounded-lg p-6 flex flex-col justify-between text-center"
+          >
+            <div className="space-y-4">
+              <img
+                src={solution.logo}
+                alt={solution.title}
+                className="w-16 h-16 mx-auto object-contain"
+              />
+              <h3 className="font-bold text-gray-900 text-lg">{solution.title}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">{solution.description}</p>
+            </div>
+
+            <button className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-full transition-colors mt-6">
               Buy now
             </button>
           </div>

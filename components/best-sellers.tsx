@@ -6,11 +6,11 @@ export default function BestSellers() {
   const [activeCategory, setActiveCategory] = useState("Results-Driven")
 
   const products = [
-    { name: "Dent Pure", category: "Results-Driven", rating: 5, image: "🧴" },
-    { name: "True Fem", category: "All-Natural", rating: 5, image: "💊" },
-    { name: "Vita Renew", category: "Non-GMO", rating: 5, image: "💉" },
-    { name: "ProstaZen", category: "Cruelty-Free", rating: 5, image: "📦" },
-    { name: "Nerve Freedom", category: "Results-Driven", rating: 5, image: "🧴" },
+    { name: "Dent Pure", category: "Results-Driven", rating: 5, image: "/dentpure.png" },
+    { name: "True Fem", category: "All-Natural", rating: 5, image: "/truefem.png" },
+    { name: "Vita Renew", category: "Non-GMO", rating: 5, image: "/vitarenew.png" },
+    { name: "ProstaZen", category: "Cruelty-Free", rating: 5, image: "/prostazen.png" },
+    { name: "Nerve Freedom", category: "Results-Driven", rating: 5, image: "/nervefreedom.png" },
   ]
 
   const categories = ["Results-Driven", "All-Natural", "Non-GMO", "Cruelty-Free"]
@@ -23,6 +23,7 @@ export default function BestSellers() {
         & wellness.
       </p>
 
+      {/* Categories */}
       <div className="flex gap-4 mb-12 border-b border-gray-200">
         {categories.map((category) => (
           <button
@@ -39,23 +40,31 @@ export default function BestSellers() {
         ))}
       </div>
 
+      {/* Products */}
       <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-        {products.map((product, idx) => (
-          <div key={idx} className="border border-gray-300 rounded-lg p-4 text-center">
-            <div className="text-5xl mb-4">{product.image}</div>
-            <p className="font-bold text-gray-900 mb-2">{product.name}</p>
-            <div className="flex gap-1 justify-center mb-4">
-              {[...Array(product.rating)].map((_, i) => (
-                <span key={i} className="text-yellow-400">
-                  ★
-                </span>
-              ))}
+        {products
+          .filter((p) => p.category === activeCategory)
+          .map((product, idx) => (
+            <div key={idx} className="border border-gray-300 rounded-lg p-4 text-center">
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-24 h-24 mx-auto object-contain mb-4"
+              />
+
+              <p className="font-bold text-gray-900 mb-2">{product.name}</p>
+
+              <div className="flex gap-1 justify-center mb-4">
+                {[...Array(product.rating)].map((_, i) => (
+                  <span key={i} className="text-yellow-400">★</span>
+                ))}
+              </div>
+
+              <button className="border-2 border-blue-500 text-blue-500 hover:bg-blue-50 w-full py-2 font-semibold transition-colors">
+                Shop Now
+              </button>
             </div>
-            <button className="border-2 border-blue-500 text-blue-500 hover:bg-blue-50 w-full py-2 rounded-lg font-semibold transition-colors">
-              Shop Now
-            </button>
-          </div>
-        ))}
+          ))}
       </div>
     </section>
   )

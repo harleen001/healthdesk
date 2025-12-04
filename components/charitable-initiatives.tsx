@@ -14,7 +14,7 @@ export default function CharitableInitiatives() {
           <h2 className="text-4xl font-bold mb-2">Our Charitable Initiatives</h2>
           <h3 className="text-3xl font-bold">Health Care Desk Gives Back</h3>
         </div>
-        <p className="text-center mb-12 text-lg max-w-2xl mx-auto">
+        <p className="text-justify mb-12 text-lg max-w-2xl mx-auto">
           At Health Care Desk, a portion of our profits are committed to supporting charities and global health research
           initiatives.
         </p>

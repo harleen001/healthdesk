@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Header() {
   return (
@@ -6,8 +7,14 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">HD</span>
+            {/* INCREASED LOGO SIZE: Changed from w-8 h-8 to w-10 h-10 */}
+            <div className="w-10 h-10 relative"> 
+              <Image 
+                src="/logo.png" 
+                alt="Health Desk Logo"
+                layout="fill" 
+                objectFit="contain" 
+              />
             </div>
             <span className="font-bold text-lg">Health Desk</span>
           </div>

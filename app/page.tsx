@@ -14,13 +14,16 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       <Header />
       <Hero />
+      <NutritionSolutions />
+       <BestSellers />
       <TrustBadges />
       <NaturalComponents />
+      <ResearchBacked />
+      
       <CharitableInitiatives />
       <Testimonials />
-      <BestSellers />
-      <ResearchBacked />
-      <NutritionSolutions />
+     
+      
       <Footer />
     </main>
   )
